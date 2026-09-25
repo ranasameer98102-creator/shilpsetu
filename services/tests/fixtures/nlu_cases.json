@@ -1,0 +1,22 @@
+[
+  {"id": "en-mockup", "text": "Blue pottery vase, hand-painted",
+   "expect": {"product_type": "vase", "technique": ["blue_pottery", "hand_painted"], "category": "Pottery & Ceramics", "gi_craft": "Jaipur Blue Pottery"}},
+  {"id": "hi-vase-full", "text": "यह नीली पॉटरी का फूलदान है, हाथ से पेंट किया है, तीन दिन लगे, सामान 300 रुपये का लगा, 12 इंच ऊंचा",
+   "expect": {"product_type": "vase", "time_hours": 24.0, "material_cost": 300.0, "dimensions_cm": {"height": 30.5}, "colors": ["blue"]}},
+  {"id": "hi-dhokra-words", "text": "ढोकरा का पीतल का घोड़ा, पांच दिन लगे, सामान का खर्च डेढ़ हज़ार रुपये",
+   "expect": {"product_type": "horse", "materials": ["brass"], "technique": ["dhokra"], "time_hours": 40.0, "material_cost": 1500.0, "category": "Metalcraft"}},
+  {"id": "bn-saree-bengali-digits", "text": "শান্তিপুর তাঁতের সুতি শাড়ি, লাল আর সাদা, সাত দিন লেগেছে, উপকরণে ৮০০ টাকা খরচ",
+   "expect": {"product_type": "saree", "materials": ["cotton"], "colors": ["red", "white"], "time_hours": 56.0, "material_cost": 800.0, "region": {"city": "Shantipur", "state": "West Bengal"}}},
+  {"id": "mr-warli", "text": "वारली चित्र, हाताने रंगवलेले, दोन दिवस लागले",
+   "expect": {"product_type": "painting", "technique": ["warli"], "time_hours": 16.0, "category": "Paintings & Folk Art"}},
+  {"id": "hinglish", "text": "bamboo ki tokri, ek din laga, 5 pieces hain",
+   "expect": {"product_type": "basket", "materials": ["bamboo"], "time_hours": 8.0, "quantity": 5, "category": "Bamboo & Cane"}},
+  {"id": "no-false-mug-in-kapda", "text": "सूती कपड़ा बना दिया",
+   "expect": {"product_type": "fabric", "materials": ["cotton"]}},
+  {"id": "wooden-elephant-not-metal", "text": "wooden elephant, hand carved, 2 kg",
+   "expect": {"product_type": "elephant", "category": "Woodcraft", "weight_g": 2000.0}},
+  {"id": "price-vs-cost", "text": "silk stole, materials cost 900 rupees, I want to sell for 2500",
+   "expect": {"material_cost": 900.0, "price_hint": 2500.0, "materials": ["silk"]}},
+  {"id": "empty", "text": "",
+   "expect": {"product_type": null, "category": null}}
+]

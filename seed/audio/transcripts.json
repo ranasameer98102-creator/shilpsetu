@@ -1,0 +1,12 @@
+{
+  "b8076717f10f12ef5f49285970c0ba34d3d63198b8d6ff55c33e8699682fa0bb": {
+    "text": "Blue pottery vase, hand-painted",
+    "language": "hi",
+    "file": "demo_blue_pottery_vase.wav"
+  },
+  "7851b50854128575c64efdde3d8184e99eec16c152e74b3cddf965026a0c46f8": {
+    "text": "Three days. Materials cost three hundred rupees.",
+    "language": "en",
+    "file": "demo_answer_three_days.wav"
+  }
+}

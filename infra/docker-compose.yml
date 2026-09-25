@@ -1,0 +1,92 @@
+# ShilpSetu full stack. `docker compose up` (from infra/) then `flutter run` in apps/mobile.
+# Every external service defaults to a mock (see .env.example), so no API keys are needed for the demo.
+name: shilpsetu
+
+x-app: &app
+  build:
+    context: ..
+    dockerfile: services/Dockerfile
+  env_file: [.env.example]
+  environment: &app-env
+    DATABASE_URL: postgresql+psycopg://shilpsetu:shilpsetu@postgres:5432/shilpsetu
+    REDIS_URL: redis://redis:6379/0
+    STORAGE_PROVIDER: s3
+    S3_ENDPOINT_URL: http://minio:9000
+    DATA_DIR: /data
+    JOB_MODE: rq
+  volumes:
+    - appdata:/data
+  depends_on:
+    postgres: {condition: service_healthy}
+    redis: {condition: service_started}
+    minio: {condition: service_started}
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: shilpsetu
+      POSTGRES_PASSWORD: shilpsetu
+      POSTGRES_DB: shilpsetu
+    ports: ["5432:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U shilpsetu"]
+      interval: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    ports: ["6379:6379"]
+
+  minio:
+    image: minio/minio:latest
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    ports: ["9000:9000", "9001:9001"]
+    volumes: [miniodata:/data]
+
+  # FastAPI: auth, artisans, products, orders, certificates, pricing, sync, storefront, admin (+ ONDC routes)
+  api:
+    <<: *app
+    command: sh -c "alembic upgrade head && python -m scripts.seed --if-empty && uvicorn api.main:app --host 0.0.0.0 --port 8000"
+    ports: ["8000:8000"]
+
+  # AI workers: ASR/NLU, listing generation, translation, image enhancement, fair price (RQ queue, scale to zero)
+  ai:
+    <<: *app
+    command: python -m workers.worker
+    depends_on:
+      api: {condition: service_healthy}
+
+  # Background jobs: nightly retraining (price + ranking) and ONDC catalog sync
+  workers:
+    <<: *app
+    command: python -m workers.scheduler
+    depends_on:
+      api: {condition: service_healthy}
+
+  # Beckn BPP adapter at the public subscriber URI (mock gateway + fake buyer app at /ondc-mock/buyer)
+  ondc_adapter:
+    <<: *app
+    command: uvicorn ondc_adapter.app:app --host 0.0.0.0 --port 8001
+    ports: ["8001:8001"]
+    depends_on:
+      api: {condition: service_healthy}
+
+  # Admin / CSC dashboard + buyer web storefront (Flutter web builds served by nginx)
+  admin_web:
+    image: nginx:1.27-alpine
+    ports: ["8080:80", "8081:81"]
+    volumes:
+      - ../apps/admin_web/build/web:/usr/share/nginx/html/admin:ro
+      - ../apps/mobile/build/web:/usr/share/nginx/html/store:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on: [api]
+
+volumes:
+  pgdata:
+  miniodata:
+  appdata:

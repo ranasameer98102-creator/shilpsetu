@@ -1,0 +1,360 @@
+{
+  "@@locale": "en",
+  "languageName": "English",
+  "appTitle": "ShilpSetu",
+  "tagline": "AI Co-Seller for Marginalized Artisans",
+  "heroLine": "From handmade to headline-worthy — every craft, always in market.",
+  "promise": "One photo. One spoken sentence. A fair-priced, trust-verified listing — no typing, no middleman, no English required.",
+  "next": "Next",
+  "back": "Back",
+  "retry": "Try again",
+  "save": "Save",
+  "cancel": "Cancel",
+  "done": "Done",
+  "skip": "Skip",
+  "yes": "Yes",
+  "no": "No",
+  "loading": "Please wait…",
+  "errorGeneric": "Something went wrong. Please try again.",
+  "errorNetwork": "No network. Your work is saved on the phone.",
+  "savedOnPhone": "Saved on phone — will upload when network returns",
+  "allSynced": "All synced",
+  "syncing": "Uploading…",
+  "pendingCount": "{count} waiting to upload",
+  "@pendingCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "chooseRole": "Who are you?",
+  "roleArtisan": "I make crafts",
+  "roleBuyer": "I want to buy",
+  "roleKiosk": "Kiosk / CSC helper",
+  "chooseLanguage": "Choose your language",
+  "tapToHear": "Tap once to hear, tap again to choose",
+  "enterPhone": "Your mobile number",
+  "sendCode": "Send code",
+  "enterCode": "Enter the 6-digit code",
+  "codeSentTo": "Code sent to {phone}",
+  "@codeSentTo": {
+    "placeholders": {
+      "phone": {
+        "type": "String"
+      }
+    }
+  },
+  "verify": "Verify",
+  "sayNumber": "Say your number",
+  "demoCode": "Demo code: {code}",
+  "@demoCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "consentTitle": "Your permission",
+  "consentBody": "ShilpSetu will save your voice, your photos and your village location so that it can sell your crafts. You can delete them at any time.",
+  "consentVoice": "Save my voice",
+  "consentPhoto": "Save my photos",
+  "consentLocation": "Save my village location",
+  "iAgree": "Yes, I agree",
+  "sayYesToAgree": "Or say “yes” to agree",
+  "profileTitle": "Tell us about yourself",
+  "askName": "What is your name?",
+  "askVillage": "Which village or town are you from?",
+  "askState": "Which district and state?",
+  "askCraft": "What craft do you make?",
+  "askYears": "For how many years have you done this craft?",
+  "askStory": "Tell us your story — how did you learn this craft?",
+  "askPehchan": "If you have a Pehchan artisan card, say its number. Otherwise tap Skip.",
+  "tapMicToAnswer": "Tap the mic and answer",
+  "weHeard": "We heard:",
+  "profileSaved": "Your profile is saved",
+  "greeting": "Namaste, {name}",
+  "@greeting": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "tileAddProduct": "Add Product",
+  "tileMyProducts": "My Products",
+  "tileOrders": "Orders",
+  "tileEarnings": "Earnings",
+  "tileHelp": "Help",
+  "earningsSummary": "This month you earned {amount} from {count} orders",
+  "@earningsSummary": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "addProductTitle": "Add a Product",
+  "speakOwnLanguage": "Speak in your own language",
+  "listeningIn": "Listening in {language}…",
+  "@listeningIn": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "tapToSpeak": "Tap to speak, or hold to talk",
+  "stopRecording": "Tap to stop",
+  "photoCaptured": "Photo captured — enhancing background & light automatically",
+  "takePhoto": "Take a photo",
+  "addMorePhotos": "Add more photos",
+  "makeListing": "Make my listing",
+  "hintTooDark": "It is a little dark — move towards the light if you can",
+  "hintTooBright": "Too much light — move to a little shade",
+  "hintMoveCloser": "Move a little closer",
+  "hintBlurry": "Hold the phone steady",
+  "anyBackground": "Any light, any background is fine",
+  "upTo60s": "Up to 60 seconds",
+  "aiBuilding": "AI is building your listing",
+  "stepAsr": "Understanding your voice",
+  "stepNlu": "Finding the details",
+  "stepListing": "Writing title and description",
+  "stepTranslation": "Translating for buyers",
+  "stepImage": "Cleaning up your photo",
+  "stepPrice": "Working out a fair price",
+  "stepCertificate": "Preparing your certificate",
+  "quickQuestions": "A few quick questions",
+  "answerBySpeaking": "Answer by speaking",
+  "reviewTitle": "Check and approve",
+  "approve": "Approve",
+  "changePrice": "Change price",
+  "retakePhoto": "Retake photo",
+  "reRecord": "Re-record",
+  "sayNewPrice": "Say the new price",
+  "youGet": "You get {amount} ({pct}%)",
+  "@youGet": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "pct": {
+        "type": "String"
+      }
+    }
+  },
+  "marketRate": "Market rate {low} – {high}",
+  "@marketRate": {
+    "placeholders": {
+      "low": {
+        "type": "String"
+      },
+      "high": {
+        "type": "String"
+      }
+    }
+  },
+  "fairPrice": "Fair price",
+  "category": "Category",
+  "priceSpoken": "Price {price}. You get {amount}.",
+  "@priceSpoken": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "belowFairWage": "This is below a fair wage for your time",
+  "isLive": "Your product is live!",
+  "onOndc": "Also listed on the ONDC network",
+  "certificateReady": "Your certificate is ready",
+  "statusQueued": "Queued",
+  "statusUploading": "Uploading",
+  "statusProcessing": "Processing",
+  "statusNeedsReview": "Needs review",
+  "statusReady": "Ready to approve",
+  "statusLive": "Live",
+  "statusFailed": "Needs attention",
+  "statusUnpublished": "Hidden",
+  "noProducts": "No products yet. Tap Add Product.",
+  "newOrder": "New order",
+  "accept": "Accept",
+  "decline": "Decline",
+  "markPacked": "Packed",
+  "markShipped": "Shipped",
+  "noOrders": "No orders yet",
+  "orderPlaced": "New",
+  "orderAccepted": "Accepted",
+  "orderPacked": "Packed",
+  "orderShipped": "On the way",
+  "orderDelivered": "Delivered",
+  "orderDeclined": "Declined",
+  "orderCancelled": "Cancelled",
+  "gross": "Sale",
+  "commission": "Platform fee",
+  "logistics": "Shipping",
+  "net": "You received",
+  "everyRupee": "Every rupee explained",
+  "helpTitle": "Help",
+  "callHelpline": "Call the helpline",
+  "requestCallback": "Ask a helper to call me",
+  "callbackRequested": "A helper will call you soon",
+  "howToUse": "How ShilpSetu works",
+  "fiveSteps": "Speak · Snap · AI builds it · You approve · Goes live",
+  "searchHint": "Search crafts, states, artisans",
+  "freshFromLoom": "Fresh from the loom & wheel",
+  "byCraft": "By craft",
+  "byState": "By state & cluster",
+  "womenLed": "Women-led collectives",
+  "giTagged": "GI-tagged crafts",
+  "nearYou": "Near you",
+  "filters": "Filters",
+  "verifiedOnly": "Verified artisans only",
+  "giOnly": "GI-tagged only",
+  "sortBy": "Sort",
+  "sortRelevance": "Best match",
+  "sortPriceLow": "Price: low to high",
+  "sortPriceHigh": "Price: high to low",
+  "sortNewest": "Newest",
+  "results": "{count} crafts",
+  "@results": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "addToCart": "Add to Cart",
+  "addedToCart": "Added to cart",
+  "scanCertificate": "Scan for Artisan Provenance Certificate",
+  "certificateSub": "Materials, story & fair-price basis",
+  "howPriceBuilt": "How this price is built",
+  "goesToArtisan": "{amount} of this goes directly to the artisan ({pct}%)",
+  "@goesToArtisan": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "pct": {
+        "type": "String"
+      }
+    }
+  },
+  "meetArtisan": "Meet the artisan",
+  "hearVoice": "Hear their voice",
+  "moreFromArtisan": "More from this artisan",
+  "reviewsCount": "({count} reviews)",
+  "@reviewsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "verifiedArtisan": "Verified Artisan",
+  "cart": "Cart",
+  "cartEmpty": "Your cart is empty",
+  "checkout": "Checkout",
+  "placeOrder": "Place order",
+  "payUpi": "Pay by UPI",
+  "cod": "Cash on delivery",
+  "deliveryIn": "Delivery in about {days} days",
+  "@deliveryIn": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "shippingIncluded": "Shipping & packing are included in the fair price",
+  "orderPlacedThanks": "Thank you! Your order is placed.",
+  "myOrders": "My orders",
+  "rateCraft": "Rate this craft",
+  "scanQr": "Scan a certificate QR",
+  "certValid": "Genuine — verified by ShilpSetu",
+  "certInvalid": "Not valid",
+  "name": "Name",
+  "address": "Address",
+  "city": "City",
+  "state": "State",
+  "pincode": "PIN code",
+  "phone": "Phone",
+  "total": "Total",
+  "kioskTitle": "Kiosk",
+  "myArtisans": "Artisans",
+  "onboardArtisan": "Onboard an artisan",
+  "captureFor": "Capture for {name}",
+  "@captureFor": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "batchMode": "Exhibition batch mode",
+  "printTags": "Print certificate tags",
+  "syncAll": "Sync all",
+  "attestation": "I checked their identity and recorded their spoken consent",
+  "recordConsent": "Record the artisan saying they agree",
+  "about": "About",
+  "logout": "Log out",
+  "lowBandwidth": "Low-data mode",
+  "switchRole": "Switch mode",
+  "productsCount": "{count} products",
+  "gender": "Gender (optional, self-declared)",
+  "genderFemale": "Female",
+  "genderMale": "Male",
+  "genderOther": "Other",
+  "genderPreferNot": "Prefer not to say",
+  "typeInstead": "Or type the answer",
+  "send": "Send",
+  "serverAddress": "Server address",
+  "serverAddressHint": "Only change this if a helper asks you to",
+  "saved": "Saved",
+  "@productsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "darkMode": "Dark mode",
+  "lightMode": "Light mode",
+  "productDetails": "Product details",
+  "aboutArtForm": "About this art form",
+  "howItsMade": "How it's made",
+  "didYouKnow": "Did you know?",
+  "yearsOfPractice": "{count} years of practice",
+  "photoCredits": "Photo credits",
+  "photoCreditsSub": "Real craft photos from Wikimedia Commons, used under their licences",
+  "askShilpi": "Ask Shilpi",
+  "assistantName": "Shilpi",
+  "assistantTagline": "Your ShilpSetu helper",
+  "assistantThinking": "Thinking…",
+  "askAnything": "Ask me anything",
+  "close": "Close",
+  "dayStreak": "day streak",
+  "todaysGoal": "today's goal",
+  "craftOfTheDay": "Craft of the day",
+  "exploreCraft": "Explore",
+  "celebrateLive": "Your craft is live!",
+  "@yearsOfPractice": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "micPermission": "Please allow the microphone: Settings → Apps → ShilpSetu → Permissions → Microphone.",
+  "micUnavailable": "This phone has no voice typing. Turn on Google voice typing (Speech Services by Google), or type instead.",
+  "micInsecure": "The microphone works only in the ShilpSetu app or on a secure https link. Please use the app.",
+  "micNoSpeech": "I couldn't hear you. Tap the mic and speak a little louder.",
+  "micNetwork": "Voice typing needs internet on this phone. Please check your connection.",
+  "pressBackAgain": "Press back again to exit"
+}

@@ -1,0 +1,11 @@
+.git
+.venv
+**/__pycache__
+**/.pytest_cache
+services/.data
+apps/mobile
+apps/admin_web
+apps/shared/lib
+apps/shared/test
+dist
+docs

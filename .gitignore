@@ -1,0 +1,29 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+services/.data/
+*.egg-info/
+
+# Env / secrets
+infra/.env
+*.pem
+*.key
+
+# Flutter / Dart
+**/.dart_tool/
+**/build/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/android/.gradle/
+**/android/local.properties
+**/ios/Pods/
+*.iml
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+dist/
+services/.data*/

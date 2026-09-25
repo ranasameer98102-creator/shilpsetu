@@ -1,0 +1,15 @@
+# Render Blueprint: New → Blueprint → pick this repository. One free web service running the demo API.
+services:
+  - type: web
+    name: shilpsetu-api
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./infra/render.Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
+      - key: WEBHOOK_TOKEN
+        generateValue: true
